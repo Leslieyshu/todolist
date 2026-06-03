@@ -101,6 +101,27 @@
       color: var(--muted);
     }
 
+    .stat span {
+      position: relative;
+      padding-left: 12px;
+      color: #334155;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .stat span::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 4px;
+      height: 14px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--primary), #60a5fa);
+      transform: translateY(-50%);
+    }
+
     .stat strong {
       color: var(--text);
       font-size: 22px;
@@ -229,11 +250,14 @@
       place-items: center;
       width: 26px;
       height: 26px;
+      min-width: 26px;
       border: 2px solid #c7d1dc;
-      border-radius: 50%;
+      border-radius: 999px;
+      padding: 0;
       background: #fff;
       color: #fff;
       flex: 0 0 auto;
+      line-height: 1;
     }
 
     .todo.done .check {
